@@ -7,7 +7,8 @@
   "author": "Mostafa Eweda <mo.eweda@gmail.com>",
   "dependencies": {
     "async": "~0.2.8",
-    "express": "~3.2.4",
+    "body-parser": "^1.17.1",
+    "express": "^3.2.6",
     "socket.io": "~0.9.14"
   }
 }
