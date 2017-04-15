@@ -17,7 +17,7 @@ const server = app.listen(3000, () => {
 /* ***************************** */
 
 app.post("/", (request, response) => {
-  convertImperialToMetric(request.body, response);
+  convertUnits(request.body, response);
 });
 
 /*
@@ -36,6 +36,6 @@ response:
 }
 */
 
-function convertImperialToMetric(query, response) {
+function convertUnits(query, response) {
   
 }
