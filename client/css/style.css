@@ -126,7 +126,7 @@ em {
   padding-bottom: 2em;
   background-color: #e65100;
   color: #FFF;
-  background-image: url(./img/lionbot-background.png);
+  background-image: url(./images/lionbot-background.png);
   background-repeat: no-repeat;
   background-blend-mode: luminosity;
   background-position-x: -100px;
@@ -147,7 +147,7 @@ em {
   padding-top: 2em;
   padding-bottom: 2em;
   background-color: #fafafa;
-  background-image: url(./img/lionbot-background.png); /*fallback*/
+  background-image: url(./images/lionbot-background.png); /*fallback*/
   background-image: linear-gradient(to right, #fafafa, rgba(250, 250, 250, 0.7)), url(./img/lionbot-background.png);
   background-position-x: 100%;
   background-position-x: 100%, 120%;
@@ -219,7 +219,7 @@ em {
   text-align: center;
   background: #FFF;
   z-index: 99999;
-  background-image: url(./img/lionbot-background.png); 
+  background-image: url(./images/lionbot-background.png); 
   /*background-position-x: 100%;*/
   /*background-size: 25%;*/
   background-position: 50% 2%; 
