@@ -1,5 +1,6 @@
 "use strict";
 
+const conversions = require("./conversions");
 const express = require("express");
 const bodyParser = require("body-parse");
 const app = express();
@@ -37,5 +38,46 @@ response:
 */
 
 function convertUnits(query, response) {
+  /*if (query.token !== process.env.SLACK_VERIFICATION_TOKEN) {
+    return;
+  }*/
+  
+  //TODO Figure out function for this user request example:
+  // /convertme 10 78
+  // 10 is the key in our module
+  // 78 is the number the user wants to convert into another unit of measurement
+  
+  if (query.text) {
+    let conversion = query.text;
+    const digitTest = /^\d+$/;
+    
+    if(digitTest.test(conversion)) { // not a digit
+      response.send("That's incorrect syntax. Please enter a 2 digit number like 10");
+      return;
+    }
+    
+    let conversionNumber = conversions[conversion];
+    if(!conversionNumber) {
+      response.send("Sorry, " + conversionNumber + " is not an available conversion number");
+      return;
+    }
+    
+    let data = {
+      response_type: "in_channel", // public to the channel
+      text: conversion + ": " + conversionNumber
+    };
+    response.json(data);
+  } else {
+    let data = {
+      response_type: "ephemeral", // private message to user
+      text: "How to use /convertme command:",
+      attachments: [
+      {
+        text: "Type a conversion number and number to convert after command, " +
+        "/convertme 10 78"
+      }  
+    ]};
+    response.json(data);
+  }
   
 }

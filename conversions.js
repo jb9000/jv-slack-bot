@@ -1,8 +1,13 @@
 module.exports = {
   // LENGTH
-  "in2cm": "1in = 2.54cm",
-  "in2mm": "1in = 25.4mm",
-  "ft2m": "1ft = 0.3048m",
+  10: "1in = 2.54cm",
+  // take in input
+    // multiply input * conversion factor
+    // return converted input
+    // send converted input back convertUnits function
+  
+  11: "1in = 25.4mm",
+  12: "1ft = 0.3048m",
   "ft2cm": "1ft = 30.48cm",
   "ft2in": "1ft = 12in",
   "mi2km": "1mi = 1.609344km",
