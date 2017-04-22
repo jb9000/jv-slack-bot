@@ -51,14 +51,14 @@ function convertUnits(query, response) {
     let conversion = query.text;
     const digitTest = /^\d+$/;
     
-    if(digitTest.test(conversion)) { // not a digit
-      response.send("That's incorrect syntax. Please enter a 2 digit number like 10");
+    if(!digitTest.test(conversion)) { // not a digit
+      response.send("That's incorrect syntax. Please enter a 2 digit conversion code like 10");
       return;
     }
     
     let conversionNumber = conversions[conversion];
     if(!conversionNumber) {
-      response.send("Sorry, " + conversionNumber + " is not an available conversion number");
+      response.send("Sorry, that's not an available conversion number");
       return;
     }
     
@@ -73,8 +73,7 @@ function convertUnits(query, response) {
       text: "How to use /convertme command:",
       attachments: [
       {
-        text: "Type a conversion number and number to convert after command, " +
-        "/convertme 10 78"
+        text: "Type a conversion code after the command, e.g. `/convertme 10'",
       }  
     ]};
     response.json(data);
