@@ -2,7 +2,7 @@
 
 const conversions = require("./conversions");
 const express = require("express");
-const bodyParser = require("body-parse");
+const bodyParser = require("body-parser");
 const app = express();
 
 app.use(bodyParser.json());
