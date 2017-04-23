@@ -1,7 +1,7 @@
 {
-  "name": "slack-convertme",
+  "name": "slack-circleproperties",
   "version": "1.0.0",
-  "description": "Quickly convert from one unit to another. Just type /convertme slash command! Convert Me bot responds to you with your desired conversion.",
+  "description": "Slack bot that takes a circle's radius and outputs the circle's area, diameter, and circumference.",
   "main": "index.js",
   "scripts": {
     "start": "nf start",
@@ -11,8 +11,8 @@
     "slack",
     "slack-bot",
     "bot",
-    "convertme",
-    "conversions"
+    "circleproperties",
+    "radius"
   ],
   "author": "Team JV",
   "dependencies": {
