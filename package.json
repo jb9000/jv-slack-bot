@@ -18,6 +18,7 @@
   "dependencies": {
     "async": "~0.2.8",
     "body-parser": "^1.17.1",
-    "express": "^3.2.6"
+    "express": "^3.2.6",
+    "foreman": "^2.0.0"
   }
 }
