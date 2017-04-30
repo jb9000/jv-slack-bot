@@ -53,7 +53,7 @@ table {
 
 /* general */
 body, html {
-  background-color: #fafafa;
+  background-color: #41ead4;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   font-size: 19px;
@@ -69,7 +69,7 @@ strong {
 code {
   font-weight: 400;
   border-radius: 2px;
-  background-color: #FFF;
+  background-color: #fdfffc;
   border: 1px solid rgba(0, 0, 0, 0.1);
   display: inline-block;
   font-family: 'Source Code Pro', monospace;
@@ -124,9 +124,8 @@ em {
   margin-top: -5em;
   padding-top: 9em;
   padding-bottom: 2em;
-  background-color: #e65100;
-  color: #FFF;
-  background-image: url(./images/lionbot-background.png);
+  background-color: #41ead4;
+  color: #fdfffc;
   background-repeat: no-repeat;
   background-blend-mode: luminosity;
   background-position-x: -100px;
@@ -137,7 +136,7 @@ em {
 #sample_wrap {
   padding-top: 2em;
   padding-bottom: 2em;
-  background-color: #FFF;
+  background-color: #fdfffc;
 }
 #screenshot {
   width: 100%;
@@ -147,7 +146,6 @@ em {
   padding-top: 2em;
   padding-bottom: 2em;
   background-color: #fafafa;
-  background-image: url(./images/lionbot-background.png); /*fallback*/
   background-image: linear-gradient(to right, #fafafa, rgba(250, 250, 250, 0.7)), url(./img/lionbot-background.png);
   background-position-x: 100%;
   background-position-x: 100%, 120%;
@@ -171,7 +169,7 @@ em {
 }
 
 #credits_wrap a {
-  color: #FFB300;
+  color: #41ead4;
   text-decoration: none;
   transition: color 0.5s ease;
 }
@@ -217,9 +215,8 @@ em {
   left: 0;
   padding-top: 25vh;
   text-align: center;
-  background: #FFF;
+  background: #fdfffc;
   z-index: 99999;
-  background-image: url(./images/lionbot-background.png); 
   /*background-position-x: 100%;*/
   /*background-size: 25%;*/
   background-position: 50% 2%; 
@@ -228,13 +225,13 @@ em {
   
 }
 .splash-success {
-  color: #000;
+  color: #011627;
   background-blend-mode: normal;
   animation: successAnimation 7s ease;
 }
 
 .splash-failure {
-  color: #000;
+  color: #011627;
   background-blend-mode: exclusion;
   animation: successAnimation 7s ease;
 }
