@@ -53,7 +53,7 @@ table {
 
 /* general */
 body, html {
-  background-color: #f71735;
+  background-color: #41ead4;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   font-size: 19px;
@@ -124,7 +124,7 @@ em {
   margin-top: -5em;
   padding-top: 9em;
   padding-bottom: 2em;
-  background-color: #f71735;
+  background-color: #41ead4;
   color: #fdfffc;
   background-repeat: no-repeat;
   background-blend-mode: luminosity;
