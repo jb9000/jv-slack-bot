@@ -19,6 +19,7 @@
     "async": "~0.2.8",
     "body-parser": "^1.17.1",
     "express": "^3.2.6",
-    "foreman": "^2.0.0"
+    "foreman": "^2.0.0",
+    "request": "^2.81.0"
   }
 }
