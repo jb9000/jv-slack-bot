@@ -2,20 +2,56 @@
 
 const circle = require("./circle.js");
 const express = require("express");
+const request = require("request");
 const bodyParser = require("body-parser");
 const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded( { extended: true } ));
 
-const server = app.listen(8080, () => {
+const server = app.listen(process.env.PORT || 3333, () => {
   console.log("Express server listening on port %d in %s mode",
   server.address().port, app.settings.env);
 });
 
+// AUTHORIZATION
+app.get("/slack", function(req, resp) {
+  if (!req.query.code) { // access denied
+    resp.redirect("https://circleproperties.herokuapp.com/");
+    return;
+  }
+  var data = {form: {
+    client_id: process.env.SLACK_CLIENT_ID,
+    client_secret: process.env.SLACK_CLIENT_SECRET,
+    code: req.query.code
+  }};
+  request.post("https://slack.com/api.oauth.access", data, function(error, response, body) {
+    if (!error && response.statusCode == 200) {
+      // get authorization token
+      let token = JSON.parse(body).access_token;
+      
+      // redirect to team URL after authorization
+      request.post("https://slack.com/api/team.info", {form: {token: token}}, function(error, response, body) {
+        if (!error && response.statusCode == 200) {
+          if (JSON.parse(body).error == "missing_scope") {
+            resp.send("Circle Properties has been added to your team!");
+          } else {
+            let team = JSON.parse(body).team.domain;
+            resp.redirect("http://" + team + ".slack.com");
+          }
+        }
+      });
+    }
+  });
+});
+
+
 /* *******************************
-/* HTTP Convert Me Slash Command
+/* HTTP Circle Bot Slash Command
 /* ***************************** */
+app.get("/", (request, response) => {
+  convertUnits(request.query, response);
+});
 
 app.post("/", (request, response) => {
   convertUnits(request.body, response);
