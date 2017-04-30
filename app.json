@@ -7,6 +7,10 @@
     "HEROKU_APP_NAME": {
       "required": true
     },
+    "CIRCLEBOT_COMMAND_TOKEN": {
+      "description": "Slash command token, for the circleproperties command endpoint",
+      "required": true
+    },
     "NODE_ENV": "staging"
   },
 }
