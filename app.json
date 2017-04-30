@@ -1,0 +1,12 @@
+{
+  "name": "Circle Properties",
+  "description": "Slack bot that takes a circle's radius and outputs the circle's area, diameter, and circumference.",
+  "repository": "https://github.com/jeffbautista/jv-slack-bot",
+  "success_url": "/",
+  "env": {
+    "HEROKU_APP_NAME": {
+      "required": true
+    },
+    "NODE_ENV": "staging"
+  },
+}
