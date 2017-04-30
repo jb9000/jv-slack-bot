@@ -74,9 +74,9 @@ response:
 */
 
 function convertUnits(query, response) {
-  /*if (query.token !== process.env.SLACK_VERIFICATION_TOKEN) {
+  if (query.token !== process.env.SLACK_VERIFICATION_TOKEN) {
     return;
-  }*/
+  }
   
   if (query.text) {
     let radius = query.text;
