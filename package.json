@@ -1,5 +1,5 @@
 {
-  "name": "slack-circleproperties",
+  "name": "Circle Properties",
   "version": "1.0.0",
   "description": "Slack bot that takes a circle's radius and outputs the circle's area, diameter, and circumference.",
   "main": "index.js",
