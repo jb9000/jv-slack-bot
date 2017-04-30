@@ -69,7 +69,7 @@ strong {
 code {
   font-weight: 400;
   border-radius: 2px;
-  background-color: #FFF;
+  background-color: #fdfffc;
   border: 1px solid rgba(0, 0, 0, 0.1);
   display: inline-block;
   font-family: 'Source Code Pro', monospace;
@@ -124,7 +124,7 @@ em {
   margin-top: -5em;
   padding-top: 9em;
   padding-bottom: 2em;
-  background-color: #e65100;
+  background-color: #f71735;
   color: #fdfffc;
   background-repeat: no-repeat;
   background-blend-mode: luminosity;
@@ -169,7 +169,7 @@ em {
 }
 
 #credits_wrap a {
-  color: #FFB300;
+  color: #41ead4;
   text-decoration: none;
   transition: color 0.5s ease;
 }
